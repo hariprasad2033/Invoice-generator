@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-decor">
+    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Sticker Logo" class="logo">
+  </div>
+
+  <div class="invoice-box glass-card">
+    <h2>🧾 Stylish Invoice</h2>
+    <div class="section">
+      <label>Client Name: <input type="text" id="client-name" /></label>
+      <label>Invoice Date: <input type="date" id="invoice-date" /></label>
+    </div>
+
+    <table id="items">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Rate</th>
+          <th>Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" class="desc" /></td>
+          <td><input type="number" class="qty" value="1" /></td>
+          <td><input type="number" class="rate" value="0" /></td>
+          <td class="amount">0</td>
+          <td><button class="remove-btn">✖</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="add-item" class="btn-glow">+ Add Item</button>
+
+    <div class="totals">
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>Tax (10%): ₹<span id="tax">0</span></p>
+      <h3>Total: ₹<span id="total">0</span></h3>
+    </div>
+
+    <button onclick="window.print()" class="print-btn btn-glow">🖨️ Print Invoice</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
